@@ -11,9 +11,9 @@ app.get('/greetings/:name', (req, res) => {
         It's so great to see you!`
     })
 })
-app.listen(3000, () => {                     //tell the app to listen on port 3000 for HTTP request from clients
-    console.log('listening on port 3000')
-})
+// app.listen(3000, () => {                     //tell the app to listen on port 3000 for HTTP request from clients
+//     console.log('listening on port 3000')
+// })
 
 //Tip Calculator
 
@@ -35,11 +35,11 @@ let answerResponse = ["It is certain", "It is decidedly so", "Without a doubt", 
  "Better not tell you now", "Cannot predict now", "Concentrate and ask again","Don't count on it", "My reply is no", 
  "My sources say no","Outlook not so good", "Very doubtful"]
 
-app.get('/magic/:question', (req, res) => {
-    let question = req.params.question
+app.get('/magic/:Will%20I%20be%20a%20millionaire', (req, res) => {
+    //let question = req.params.question
     let answer = Math.floor(Math.random() * answerResponse.length)  //generate random number to get an index
     res.json({                                                           //make sure this inside of app.get
-        question: `${question} ${answerResponse[answer]}`
+        answer: `<h1>${answerResponse[answer]}</h1>`
     })
 })
 
